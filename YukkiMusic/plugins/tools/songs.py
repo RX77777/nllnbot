@@ -12,7 +12,7 @@ import re
 
 import yt_dlp
 from pykeyboard import InlineKeyboard
-from pyrogram import filters, Client
+from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, InputMediaAudio,
                             InputMediaVideo, Message)
@@ -20,7 +20,6 @@ from pyrogram.types import (InlineKeyboardButton,
 from config import (BANNED_USERS, SONG_DOWNLOAD_DURATION,
                     SONG_DOWNLOAD_DURATION_LIMIT)
 from strings import get_command
-from strings.filters import command
 from YukkiMusic import YouTube, app
 from YukkiMusic.utils.decorators.language import language, languageCB
 from YukkiMusic.utils.formatters import convert_bytes
@@ -29,38 +28,18 @@ from YukkiMusic.utils.inline.song import song_markup
 # Command
 SONG_COMMAND = get_command("SONG_COMMAND")
 
-@app.on_message(
-    command(["المطور","مطور","المبرمج"])
-    & filters.group
-    & ~filters.edited
-    & ~BANNED_USERS
-)
-@language
-async def YaFa(client, Client, message: Message):
-    upl = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    text="(مطور سورس يافا)",
-                    url=f"https://t.me/ku_kx",
-                ),
-            ],
-        ]
-    )
-
-
 # Song Module
 
 
 @app.on_message(
     filters.command(SONG_COMMAND)
-    & filters.group
     & filters.private
+    & filters.group
     & ~filters.edited
     & ~BANNED_USERS
 )
 @language
-async def song_commad_group_private(client, Client, message: Message, _):
+async def song_commad_group_private(client, message: Message, _):
     await message.delete()
     url = await YouTube.url(message)
     if url:
