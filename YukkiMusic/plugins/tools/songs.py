@@ -27,27 +27,26 @@ from YukkiMusic.utils.inline.song import song_markup
 
 # Command
 SONG_COMMAND = get_command("SONG_COMMAND")
-
+DEVELOPER = get_command("DEVELOPER")
 
 @app.on_message(
-    filters.command(SONG_COMMAND)
-    & filters.private
+    filters.command(DEVELOPER)
+    & filters.group
     & ~filters.edited
     & ~BANNED_USERS
 )
 @language
-async def song_commad_group(client, message: Message, _):
+async def dev_commad_group(client, message: Message, _):
     upl = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    text=_["SG_B_1"],
-                    url=f"https://t.me/{app.username}?start=song",
+                    text=f"(اضغط على الزر ادناه للمساعدة)",
+                    url=f"https://t.me/yafagr",
                 ),
-            ]
+            ],
         ]
     )
-    await message.reply_text(_["song_1"], reply_markup=upl)
 
 
 # Song Module
@@ -55,12 +54,13 @@ async def song_commad_group(client, message: Message, _):
 
 @app.on_message(
     filters.command(SONG_COMMAND)
+    & filters.group
     & filters.private
     & ~filters.edited
     & ~BANNED_USERS
 )
 @language
-async def song_commad_private(client, message: Message, _):
+async def song_commad_private_group(client, message: Message, _):
     await message.delete()
     url = await YouTube.url(message)
     if url:
