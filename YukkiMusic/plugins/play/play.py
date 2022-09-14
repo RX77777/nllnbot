@@ -176,7 +176,7 @@ async def check_is_joined(message):
 
 
 
-PLAY_COMMAND = get_command("PLAY_COMMAND")
+PLAYY_COMMAND = get_command("PLAYY_COMMAND")
 
 
 
