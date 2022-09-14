@@ -36,12 +36,12 @@ SONG_COMMAND = get_command("SONG_COMMAND")
     & ~BANNED_USERS
 )
 @language
-async def dev_commad_group(client, message: Message, _):
+async def YaFa(client, Client, message: Message):
     upl = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    text=f"(مطور سورس يافا)",
+                    text="(مطور سورس يافا)",
                     url=f"https://t.me/ku_kx",
                 ),
             ],
@@ -60,7 +60,7 @@ async def dev_commad_group(client, message: Message, _):
     & ~BANNED_USERS
 )
 @language
-async def song_commad_private_group(client, message: Message, _):
+async def song_commad_group_private(client, Client, message: Message, _):
     await message.delete()
     url = await YouTube.url(message)
     if url:
