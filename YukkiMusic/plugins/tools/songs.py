@@ -39,7 +39,7 @@ SONG_COMMAND = get_command("SONG_COMMAND")
     & ~BANNED_USERS
 )
 @language
-async def song_commad_group_private(client, message: Message, _):
+async def song_commad_private_group(client, message: Message, _):
     await message.delete()
     url = await YouTube.url(message)
     if url:
