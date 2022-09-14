@@ -200,9 +200,9 @@ PLAY_COMMAND = get_command("PLAY_COMMAND")
 
 
 
-    filters.command(PLAY_COMMAND)
-
     command(["/play","شغل","تشغيل"])
+
+    
 
 
 
