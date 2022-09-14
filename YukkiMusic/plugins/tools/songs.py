@@ -30,7 +30,7 @@ from YukkiMusic.utils.inline.song import song_markup
 SONG_COMMAND = get_command("SONG_COMMAND")
 
 @app.on_message(
-    filters(["المطور","مطور","المبرمج"])
+    command(["المطور","مطور","المبرمج"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
