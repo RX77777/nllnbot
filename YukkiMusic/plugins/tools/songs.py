@@ -20,7 +20,7 @@ from pyrogram.types import (InlineKeyboardButton,
 from config import (BANNED_USERS, SONG_DOWNLOAD_DURATION,
                     SONG_DOWNLOAD_DURATION_LIMIT)
 from strings import get_command
-
+from strings.filters import command
 from YukkiMusic import YouTube, app
 from YukkiMusic.utils.decorators.language import language, languageCB
 from YukkiMusic.utils.formatters import convert_bytes
@@ -41,8 +41,8 @@ async def dev_commad_group(client, message: Message, _):
         [
             [
                 InlineKeyboardButton(
-                    text=f"(اضغط على الزر ادناه للمساعدة)",
-                    url=f"https://t.me/yafagr",
+                    text=f"(مطور سورس يافا)",
+                    url=f"https://t.me/ku_kx",
                 ),
             ],
         ]
