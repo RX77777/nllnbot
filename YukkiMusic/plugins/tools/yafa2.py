@@ -1,20 +1,44 @@
-from utlis.rank import setrank,isrank,remrank,remsudos,setsudo, GPranks,IDrank
-from utlis.send import send_msg, BYusers, GetLink,Name,Glang
-from utlis.locks import st,getOR
-from utlis.tg import Bot
-from config import *
-from YukkiMusic import app
+import requests
+from telebot import types
+import telebot
+from time import sleep
+import random
+from strings.filters import command
+token = '{BOT_TOKEN}'
+from config import BOT_TOKEN
+bot = telebot.TeleBot(token)
+r=requests.session() 
+co = types.InlineKeyboardButton(text ="- غنيلي",callback_data = 'check')
+#----#
 
-import threading, requests, time, random, re, json
-import importlib
 
-from os import listdir
-from os.path import isfile, join
-def updateMsgs(client, message,redis):
-  userID = message.from_user.id
-  chatID = message.chat.id
-  userFN = message.from_user.first_name
-  rank = isrank(redis,userID,chatID)
-  text = message.text
-  if text and text == "غنيلي" :
-      client.copy_message(chatID,"txsongs",random.randint(1, 299),reply_to_message_id=message.id)
+@bot.message_handler(commands=['غنيلي'])
+def start(message):
+    use = message.from_user.username
+    fr = message.from_user.first_name
+    maac = types.InlineKeyboardMarkup()
+    maac.row_width = 2
+    maac.add(co)
+    bjj = message.chat.id
+    bot.send_message(message.chat.id,text=f"""<strong>
+Hi <code>{fr}</code>, 
+- - - - - - - - - - 
+أهلا بك {name}  
+اضغط غنيلي ليتم اختيار اغنية عشوائية 
+- - - - - - - - - - 
+</strong>
+    """,parse_mode='html',reply_to_message_id=message.message_id, reply_markup=maac)
+@bot.callback_query_handler(func=lambda call: True)
+def qwere(call):
+    if call.data == 'check':
+    	combo(call.message)   	
+def combo(message):
+		bot.send_message(message.chat.id,"<strong>يتم العثور الرجاء الانتظار... </strong>",parse_mode="html")
+		rl = random.randint(74,154)
+		url = f"https://t.me/song_bott/{rl}"
+		bot.send_audio(message.chat.id,url,caption="<strong>الاغنية </strong>",parse_mode="html")
+		
+    
+pass
+
+bot.polling(True)
