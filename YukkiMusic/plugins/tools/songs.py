@@ -34,7 +34,7 @@ SONG_COMMAND = get_command("SONG_COMMAND")
 @app.on_message(
     filters.command(SONG_COMMAND)
     & filters.private
-    & filters.group
+    & ~filters.group
     & ~filters.edited
     & ~BANNED_USERS
 )
