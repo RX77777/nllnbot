@@ -3,6 +3,7 @@ from utlis.send import send_msg, BYusers, GetLink,Name,Glang
 from utlis.locks import st,getOR
 from utlis.tg import Bot
 from config import *
+from YukkiMusic import app
 
 import threading, requests, time, random, re, json
 import importlib
