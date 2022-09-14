@@ -3,7 +3,6 @@
 import requests
 from strings.filters import command
 from gpytranslate import Translator
-from pyrogram.types import Message, User
 from aiohttp import ClientSession
 from pyrogram import filters, Client
 import re
