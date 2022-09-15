@@ -5,7 +5,7 @@ from config import YAFA_CHANNEL, YAFA_NAME, CHANNEL_SUDO
 from YukkiMusic import app
 
 
-@app.on_message(~filters.edited & filters.incoming & filters.private, & filters.group)
+@app.on_message(~filters.edited & filters.incoming & filters.private & filters.group)
 async def must_join_channel(bot: Client, msg: Message):
     if not YAFA_CHANNEL:  # Not compulsory
         return
