@@ -128,3 +128,18 @@ async def invitelink(client, message):
     except:
         return await message.reply_text("قم برفعي مسؤول في المجموعة أولا ؟")
     await message.reply_text(f"**تم إنشاء رابط الدعوة بنجاح :**\n {invitelink}")
+    
+ 
+@app.on_message(
+    command("مسح") & admin_filter,
+)
+async def del_msg(client, m: Message, _):
+    if m.reply_to_message:
+        await m.delete()
+        await app.delete_messages(
+            chat_id=m.chat.id,
+            message_ids=m.reply_to_message.message_id,
+        )
+    else:
+        await m.reply_text("- لازم تكون آدمن ؟")
+    return
