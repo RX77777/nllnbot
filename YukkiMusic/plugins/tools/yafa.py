@@ -4,7 +4,7 @@ import requests
 from strings.filters import command
 from gpytranslate import Translator
 from aiohttp import ClientSession
-from pyrogram import filters, Client
+from pyrogram import filters, admin_filter, Client
 import re
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
