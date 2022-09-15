@@ -23,7 +23,7 @@ async def must_join_channel(bot: Client, msg: Message):
                     f"- عذراً !! عليك الأشتراك بقناة البوت أولاً :",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton(u"{YAFA_NAME}", url=link)]
+                        [InlineKeyboardButton(f"{YAFA_NAME}", url=link)]
                     ])
                 )
                 await msg.stop_propagation()
