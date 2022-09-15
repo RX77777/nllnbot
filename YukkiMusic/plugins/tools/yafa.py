@@ -6,7 +6,7 @@ from gpytranslate import Translator
 from aiohttp import ClientSession
 from pyrogram import filters, Client
 import re
-from YukkiMusic.utils.decorators import admins
+from Yukki.utils.custom_filters import admin_filter, command
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 from telegraph import upload_file
@@ -131,8 +131,8 @@ async def invitelink(client, message):
     await message.reply_text(f"**تم إنشاء رابط الدعوة بنجاح :**\n {invitelink}")
     
 
-@app.on_message(command("مسح"))
-@admins
+@app.on_message(command("مسح") & admin_filters,
+               )
 async def del_msg(client, m: Message, _):
     if m.reply_to_message:
         await m.delete()
