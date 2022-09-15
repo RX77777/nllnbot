@@ -4,7 +4,7 @@ import requests
 from strings.filters import command
 from gpytranslate import Translator
 from aiohttp import ClientSession
-from pyrogram import filters, admin_filter, Client
+from pyrogram import filters, Client
 import re
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
@@ -131,7 +131,7 @@ async def invitelink(client, message):
     
  
 @app.on_message(
-    command("مسح") & admin_filter,
+    command("مسح") & ~filters.admin
 )
 async def del_msg(client, m: Message, _):
     if m.reply_to_message:
