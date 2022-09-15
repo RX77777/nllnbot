@@ -131,8 +131,7 @@ async def invitelink(client, message):
     await message.reply_text(f"**تم إنشاء رابط الدعوة بنجاح :**\n {invitelink}")
     
 
-@app.on_message(
-    command("مسح")
+@app.on_message(command("مسح")
 @AdminRightsCheck
 async def del_msg(client, m: Message, _):
     if m.reply_to_message:
