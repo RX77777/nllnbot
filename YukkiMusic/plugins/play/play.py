@@ -41,7 +41,7 @@ PLAY_COMMAND = get_command("PLAY_COMMAND")
 
 
 @app.on_message(
-    command(["شغل","تشغيل"])
+    command(["شغل","تشغيل"]) & filters.command(PLAY_COMMAND) 
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
@@ -58,24 +58,6 @@ async def play_commnd(
     url,
     fplay,
 ):
- @app.on_message(
-    filters.command(PLAY_COMMAND)
-    & filters.group
-    & ~filters.edited
-    & ~BANNED_USERS
-)
-@PlayWrapper
-async def play_commnd(
-    client,
-    message: Message,
-    _,
-    chat_id,
-    video,
-    channel,
-    playmode,
-    url,
-    fplay,
-): 
     mystic = await message.reply_text(
         _["play_2"].format(channel) if channel else _["play_1"]
     )
