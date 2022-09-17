@@ -81,7 +81,7 @@ SUPPORT_GROUP = getenv(
 )  # رابط كروبك
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
-AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", None)
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "true")
 
 # Time after which you're assistant account will leave chats automatically.
 AUTO_LEAVE_ASSISTANT_TIME = int(
@@ -144,7 +144,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(
 
 
 # You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @YukkiStringBot
-STRING1 = getenv("STRING_SESSION", "AQBtXOyLS1_dqTkpDuMvZvTW_IVRxoWABFCj4BVsNpdDcfb3O9kFgtDi4EEkir8GT3c2AK6vT8aQTbv5ACXxw3HBl5_7YvTxbU02k0KQ_Aot6oOcVpvU_AsIGLidpStlc40ttMMFbe7Ce-opE_iM_6xBQR9Kk8DFWlcv9hEDqmDmno4-ci-Ys2QyaLSnj9In6AkmNvCBpP8ovcHQ8HhLUondiYtnkvNG5A9M54DN3Yqc1EAs5wzJLk5xDF98xSu7TV1Rq88YU7RGicSCZ71owFUeblaGJ82qimAVDXCGsNRaBJJCxZP6V1UbyGdzE1T6RCC66exd425kFtArq7r9uPnJAAAAAUevEOAA")
+STRING1 = getenv("STRING_SESSION", "AQB4CNehAtXSA1Xb7LRwATj48FFo3_9VMqhWkjXbnazkbj6Jj5bnsePR2kFVjNMMb_sOVnT_BnPiTplaR4a_GiplygTJzCZuXm92292JIKuRYGok2jgGkhJCjRgo0UfJncbpNppG7v3MPFoGhiTuidRFeR1Qvr7TwwSOhcI00mKRvDGX4oB_O1FBXyymnThUjItIR7R8UpemH_dF0rg2cMPXdxGjc5NX3H1yqhzUwkDKksGerjXFD9Zp1LIoSc0XXPg-WwyhnZHfYWtAPVwCFLu0_HzTdJDyULhBZRyTmQ0ry4r7SmM5eyvn9Tbsw0m-NqzzGZdnwMCNdiC84gQ66UrFAAAAAUevEOAA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
