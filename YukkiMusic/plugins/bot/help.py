@@ -84,7 +84,7 @@ async def help_com_group(client, message: Message, _):
     keyboard = private_help_panel(_)
     await message.reply_photo(
       photo=config.START_IMG_URL,
-        _["help_2"], reply_markup=InlineKeyboardMarkup(keyboard)
+    caption=_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard)
     )
 
 
