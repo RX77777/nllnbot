@@ -13,7 +13,7 @@ from typing import Union
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from config import BANNED_USERS
+from config import BANNED_USERS, START_IMG_URL
 from strings import get_command, get_string, helpers
 from YukkiMusic import app
 from YukkiMusic.misc import SUDOERS
@@ -68,7 +68,9 @@ async def helper_private(
         language = await get_lang(chat_id)
         _ = get_string(language)
         keyboard = help_pannel(_)
-        await update.reply_text(_["help_1"], reply_markup=keyboard)
+        await update.reply_photo(
+          photo=config.START_IMG_URL,
+        caption=_["help_1"], reply_markup=keyboard)
 
 
 @app.on_message(
@@ -80,7 +82,8 @@ async def helper_private(
 @LanguageStart
 async def help_com_group(client, message: Message, _):
     keyboard = private_help_panel(_)
-    await message.reply_text(
+    await message.reply_photo(
+      photo=config.START_IMG_URL,
         _["help_2"], reply_markup=InlineKeyboardMarkup(keyboard)
     )
 
@@ -94,7 +97,7 @@ async def helper_cb(client, CallbackQuery, _):
     if cb == "hb5":
         if CallbackQuery.from_user.id not in SUDOERS:
             return await CallbackQuery.answer(
-                "Only for Sudo Users", show_alert=True
+                "هذا الأمر خاص بالمطورين", show_alert=True
             )
         else:
             await CallbackQuery.edit_message_text(
