@@ -1,6 +1,5 @@
 from typing import Union
 from strings import get_command
-from strings.filters import command
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 import config
