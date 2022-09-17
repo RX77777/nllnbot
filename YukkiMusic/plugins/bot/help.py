@@ -1,6 +1,4 @@
 from typing import Union
-from strings import get_command
-from strings.filters import command
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 import config
@@ -77,20 +75,6 @@ async def help_com_group(client, message: Message, _):
         caption=_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard)
     )
 
-@app.on_message(
-    command(["الاوامر"])
-    & filters.group
-    & ~filters.edited
-    & ~BANNED_USERS
-)
-@LanguageStart
-async def help_com_group(client, message: Message, _):
-    keyboard = private_help_panel(_)
-    await message.reply_photo(
-        photo=config.START_IMG_URL,
-        caption=_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard)
-    )
-
 @app.on_callback_query(filters.regex("help_callback") & ~BANNED_USERS)
 @languageCB
 async def helper_cb(client, CallbackQuery, _):
@@ -127,9 +111,3 @@ async def helper_cb(client, CallbackQuery, _):
         await CallbackQuery.edit_message_text(
             helpers.HELP_4, reply_markup=keyboard
         )
-    elif cb == "hb6":
-        await CallbackQuery.edit_message_text(
-            helpers.HELP_6, reply_markup=keyboard
-        )
-    
-                                 
