@@ -50,8 +50,7 @@ async def helper_private(
         language = await get_lang(chat_id)
         _ = get_string(language)
         keyboard = help_pannel(_, True)
-        if update.message.photo:
-            await update.message.delete()
+        if update.message.photo:            
             await update.message.reply_text(
                 _["help_1"], reply_markup=keyboard
             )
