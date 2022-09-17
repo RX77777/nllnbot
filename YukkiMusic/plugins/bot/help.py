@@ -70,7 +70,7 @@ async def helper_private(
         keyboard = help_pannel(_)
         await message.reply_photo(
          photo=config.START_IMG_URL
-        await update.reply_text(_["help_1"], reply_markup=keyboard))
+        caption=_["help_1"], reply_markup=keyboard))
 
 
 @app.on_message(
@@ -84,8 +84,7 @@ async def help_com_group(client, message: Message, _):
     keyboard = private_help_panel(_)
     await message.reply_photo(
      photo=config.START_IMG_URL
-    await message.reply_text(
-        _["help_2"], reply_markup=InlineKeyboardMarkup(keyboard))
+    caption=_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard))
     )
 
 
