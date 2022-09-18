@@ -12,17 +12,17 @@ from typing import Union
 
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
-
-from config import BANNED_USERS , START_IMG_URL
+import config
+from config import BANNED_USERS, START_IMG_URL
 from strings import get_command, get_string, helpers
 from YukkiMusic import app
 from YukkiMusic.misc import SUDOERS
 from YukkiMusic.utils import help_pannel
 from YukkiMusic.utils.database import get_lang, is_commanddelete_on
 from YukkiMusic.utils.decorators.language import (LanguageStart,
-                                                  languageCB)
+                                                       languageCB)
 from YukkiMusic.utils.inline.help import (help_back_markup,
-                                          private_help_panel)
+                                               private_help_panel)
 
 ### Command
 HELP_COMMAND = get_command("HELP_COMMAND")
@@ -86,8 +86,6 @@ async def help_com_group(client, message: Message, _):
         photo=config.START_IMG_URL,
         caption=_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard)
     )
-
-
 @app.on_callback_query(filters.regex("help_callback") & ~BANNED_USERS)
 @languageCB
 async def helper_cb(client, CallbackQuery, _):
