@@ -58,9 +58,9 @@ async def helper_private(
             await update.edit_message_text(
                 _["help_1"], reply_markup=keyboard
             )
-    else:
-        chat_id = update.chat.id
-        if await is_commanddelete_on(update.chat.id):
+        else:
+           chat_id = update.chat.id
+         if await is_commanddelete_on(update.chat.id):
             try:
                 await update.delete()
             except:
