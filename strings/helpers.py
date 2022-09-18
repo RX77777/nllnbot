@@ -37,15 +37,14 @@ HELP_4 ="""
 /settings • الحصول على إعدادات كاملة للمجموعة باستخدام الأزرار المضمنة"""
 
 HELP_5 ="""
-/addsudo - اضافة مطور /delsudo - حذف مطور
-/reboot - إعادة تشغيل البوت /speedtest - سرعة الخادم
+/addsudo - اضافة مطور\n/delsudo - حذف مطور
+/reboot - إعادة تشغيل البوت\n/speedtest - سرعة الخادم
 /logger [disable | enable] معرفة من يستخدم البوت
 -------------------------------
 /blacklistchat + معرف القناة او المجموعة لحظرها
 /whitelistchat + معرف القناة او المجموعة لرفع حظرها
-/blacklistedchat - المجموعات والقنوات المحظورة /block + معرف الشخص لحظره 
-/unblock + معرف الشخص لرفع حظره /blockedusers - المحظورين
-/gban + معرف الشخص لحظره عام
-/ungban + معرف الشخص لالغاء حظره عام /gbannedusers - المحظورين عام
+/blacklistedchat - المجموعات والقنوات المحظورة\n/block + معرف الشخص لحظره 
+/unblock + معرف الشخص لرفع حظره\n/blockedusers - المحظورين
+/gban + معرف الشخص لحظره عام/ungban + معرف الشخص لالغاء حظره عام\n/gbannedusers - المحظورين عام
 -------------------------------
 `/broadcast -user -assistant -pin + الرسالة لأذاعتها`"""
