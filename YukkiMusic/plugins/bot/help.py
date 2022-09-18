@@ -83,7 +83,6 @@ async def helper_private(
 @LanguageStart
 async def help_com_group(client, message: Message, _):
     keyboard = private_help_panel(_)
-    await update.reply_sticker("CAACAgQAAx0CYhwNtwACGEpjJ4r5mf8cAxlVcfPL3h7fx2myaQACvwoAAlQl2VPgLoN0E1IYMx4E")
     await message.reply_photo(
       photo=config.START_IMG_URL,
       caption=_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard)
