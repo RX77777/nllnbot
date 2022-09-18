@@ -69,8 +69,8 @@ async def helper_private(
         _ = get_string(language)
         keyboard = help_pannel(_)
         await update.reply_photo(
-            photo=config.START_IMG_URL,
-            caption=_["help_1"], reply_markup=keyboard)
+          photo=config.START_IMG_URL,
+          caption=_["help_1"], reply_markup=keyboard)
 
 
 @app.on_message(
@@ -83,8 +83,9 @@ async def helper_private(
 async def help_com_group(client, message: Message, _):
     keyboard = private_help_panel(_)
     await message.reply_photo(
-        photo=config.START_IMG_URL,
-        caption=_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard)
+      photo=config.START_IMG_URL,
+      caption=_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard)
+
     )
 @app.on_callback_query(filters.regex("help_callback") & ~BANNED_USERS)
 @languageCB
