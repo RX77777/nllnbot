@@ -55,12 +55,12 @@ async def song_commad_group(client, message: Message, _):
 
 @app.on_message(
     filters.command(SONG_COMMAND)
-    & filters.
+    & filters.private
     & ~filters.edited
     & ~BANNED_USERS
 )
 @language
-async def song_commad_group(client, message: Message, _):
+async def song_commad_private(client, message: Message, _):
     await message.delete()
     url = await YouTube.url(message)
     if url:
