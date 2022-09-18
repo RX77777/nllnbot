@@ -96,7 +96,7 @@ async def helper_cb(client, CallbackQuery, _):
     if cb == "hb5":
         if CallbackQuery.from_user.id not in SUDOERS:
             return await CallbackQuery.answer(
-                "هذا الأمر خاص بالمطورين", show_alert=True
+                "This is only for the bot owner", show_alert=True
             )
         else:
             await CallbackQuery.edit_message_text(
