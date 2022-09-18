@@ -89,7 +89,7 @@ async def help_com_group(client, message: Message, _):
     )
 @app.on_callback_query(filters.regex("help_callback") & ~BANNED_USERS)
 @languageCB
-async def helper_cb(client, CallbackQuery, language, _):
+async def helper_cb(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     cb = callback_data.split(None, 1)[1]
     keyboard = help_back_markup(_)
@@ -111,6 +111,10 @@ async def helper_cb(client, CallbackQuery, language, _):
         await CallbackQuery.edit_message_text(
             helpers.HELP_1, reply_markup=keyboard
         )
+    elif cb == "hb1":
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_1, reply_markup=keyboard
+        )
     elif cb == "hb2":
         await CallbackQuery.edit_message_text(
             helpers.HELP_2, reply_markup=keyboard
@@ -122,4 +126,16 @@ async def helper_cb(client, CallbackQuery, language, _):
     elif cb == "hb4":
         await CallbackQuery.edit_message_text(
             helpers.HELP_4, reply_markup=keyboard
+    elif cb == "hb4":
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_4, reply_markup=keyboard
+        )    )
+    
+    elif cb == "hb5":
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_5, reply_markup=keyboard
+        ) 
+    elif cb == "hb3":
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_3, reply_markup=keyboard
         )
