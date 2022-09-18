@@ -59,7 +59,7 @@ async def helper_private(
                 _["help_1"], reply_markup=keyboard
             )
         else:
-           chat_id = update.chat.id
+         chat_id = update.chat.id
          if await is_commanddelete_on(update.chat.id):
             try:
                 await update.delete()
