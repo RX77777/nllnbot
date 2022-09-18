@@ -5,6 +5,6 @@
 
 - [AHMED QA](https://t.me/ku_kx)
 
-- [YaFa Source](https://t.me/YafaMu)
+- [YaFa Source](https://t.me/YafaSor)
 
-- [YaFa Group](https://t.me/YaFaGe)
+- [YaFa Group](https://t.me/YaFaGr)
