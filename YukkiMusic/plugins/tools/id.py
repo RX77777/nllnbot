@@ -1,24 +1,24 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
-
+from strings.filters import command
 from YukkiMusic import app
 
 def get_id(msg: Message):
     if msg.media:
         for message_type in (
-            "photo",
+            "الصورة",
             "animation",
-            "audio",
+            "الصوت",
             "document",
-            "video",
+            "الفيديو",
             "video_note",
-            "voice",
+            "الفويس",
             # "contact",
             # "dice",
             # "poll",
             # "location",
             # "venue",
-            "sticker",
+            "الملصق",
         ):
             obj = getattr(msg, message_type)
             if obj:
@@ -26,7 +26,7 @@ def get_id(msg: Message):
                 return obj
 
 
-@app.on_message(filters.command(["id", "stickerid", "stkid", "stckrid"]))
+@app.on_message(command(["ايدي","ستكر"]))
 async def showid(_, message: Message):
     chat_type = message.chat.type
 
