@@ -48,5 +48,4 @@ HELP_5 ="""
 /gban + معرف الشخص لحظره عام
 /ungban + معرف الشخص لالغاء حظره عام /gbannedusers - المحظورين عام
 -------------------------------
-`/broadcast -user -assistant -pin + الرسالة لأذاعتها`
-/nobot لايقاف الاذاعة استخدم"""
+`/broadcast -user -assistant -pin + الرسالة لأذاعتها`"""
