@@ -6,19 +6,19 @@ from YukkiMusic import app
 def get_id(msg: Message):
     if msg.media:
         for message_type in (
-            "الصورة",
+            "photo",
             "animation",
-            "الصوت",
+            "audio",
             "document",
-            "الفيديو",
+            "video",
             "video_note",
-            "الفويس",
-            # "contact",
-            # "dice",
-            # "poll",
-            # "location",
-            # "venue",
-            "الملصق",
+            "voice",
+            "contact",
+            "dice",
+            "poll",
+            "location",
+            "venue",
+            "sticker",
         ):
             obj = getattr(msg, message_type)
             if obj:
