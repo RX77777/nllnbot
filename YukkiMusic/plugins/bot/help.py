@@ -68,7 +68,7 @@ async def helper_private(
         language = await get_lang(chat_id)
         _ = get_string(language)
         keyboard = help_pannel(_)
-        await update.reply_sticker("CAACAgQAAxkBAAEH2bRjJ1SrdL6tUAoshYejhVj_5meoeQACowsAAi4S0FPgu4ZDp6jy3x4E")
+        await update.reply_sticker("CAACAgQAAx0CYhwNtwACGEpjJ4r5mf8cAxlVcfPL3h7fx2myaQACvwoAAlQl2VPgLoN0E1IYMx4E")
         await update.reply_photo(
           photo=config.START_IMG_URL,
           caption=_["help_1"], reply_markup=keyboard)
@@ -83,6 +83,7 @@ async def helper_private(
 @LanguageStart
 async def help_com_group(client, message: Message, _):
     keyboard = private_help_panel(_)
+    await update.reply_sticker("CAACAgQAAx0CYhwNtwACGEpjJ4r5mf8cAxlVcfPL3h7fx2myaQACvwoAAlQl2VPgLoN0E1IYMx4E")
     await message.reply_photo(
       photo=config.START_IMG_URL,
       caption=_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard)
