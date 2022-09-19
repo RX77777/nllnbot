@@ -13,7 +13,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from YukkiMusic import app
 
-def help_pannel(_, START: Union[bool, int] = None):
+def help_pannel(_, BOT_USERNAME, START: Union[bool, int] = None):
     first = [
         InlineKeyboardButton(
             text=_["CLOSEMENU_BUTTON"], callback_data=f"close"
@@ -64,7 +64,7 @@ def help_pannel(_, START: Union[bool, int] = None):
             [
                 InlineKeyboardButton(
                 text=_["S_B_5"],
-                url=f"https://t.me/{BOT_USERNAME}?startgroup=new",
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                 ),
             ],
             mark,
