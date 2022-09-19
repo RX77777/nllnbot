@@ -28,7 +28,7 @@ def help_pannel(_, BOT_USERNAME, START: Union[bool, int] = None):
             text=_["CLOSEMENU_BUTTON"], callback_data=f"close"
         ),
     ]
-    mark = second if BOT_USERNAME START else first
+    mark = second if START else BOT_USERNAME else first
     upl = InlineKeyboardMarkup(
         [
             [
