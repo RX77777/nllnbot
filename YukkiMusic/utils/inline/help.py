@@ -10,7 +10,7 @@
 from typing import Union
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
+from config import BOT_USERNAME
 from YukkiMusic import app
 
 def help_pannel(_, BOT_USERNAME, START: Union[bool, int] = None):
@@ -28,7 +28,7 @@ def help_pannel(_, BOT_USERNAME, START: Union[bool, int] = None):
             text=_["CLOSEMENU_BUTTON"], callback_data=f"close"
         ),
     ]
-    mark = second if START and BOT_USERNAME else first
+    mark = second if START else first
     upl = InlineKeyboardMarkup(
         [
             [
@@ -43,12 +43,6 @@ def help_pannel(_, BOT_USERNAME, START: Union[bool, int] = None):
             ],
             [
                 InlineKeyboardButton(
-                    text=_["S_B_5"],
-                    url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                ),
-            ],
-            [   
-                InlineKeyboardButton(
                     text=_["H_B_3"],
                     callback_data="help_callback hb3",
                 ),
@@ -58,6 +52,12 @@ def help_pannel(_, BOT_USERNAME, START: Union[bool, int] = None):
                 ),
             ],
             [
+                InlineKeyboardButton(
+                    text=_["S_B_5"],
+                    url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                ),
+            ],
+            [   
                 InlineKeyboardButton(
                     text=_["H_B_7"],
                     callback_data="help_callback hb6",
