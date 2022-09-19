@@ -58,6 +58,9 @@ UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
     "https://github.com/YafaMuwicQ/ahmad",
 )
+BOT_USERNAME = getenv(
+    "BOT_USERNAME"; "YaFaMuBot",
+)  # معرف بوتك بدون @
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
 # GIT TOKEN ( if your edited repo is private)
