@@ -59,7 +59,7 @@ UPSTREAM_REPO = getenv(
     "https://github.com/YafaMuwicQ/ahmad",
 )
 BOT_USERNAME = getenv(
-    "BOT_USERNAME"; "YaFaMuBot",
+    "BOT_USERNAME", "YaFaMuBot"
 )  # معرف بوتك بدون @
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
