@@ -17,11 +17,11 @@ from pyrogram import filters
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID", "17253097"))
-API_HASH = getenv("API_HASH", "6f79922a4f9891b8f4e7b2ae2978cde6")
+API_ID = int(getenv("API_ID", "17694201"))
+API_HASH = getenv("API_HASH", "eb8b38c80b362ae8673ac2b59bac17c6")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "5741878182:AAHWGZrLSShjSvBgavyTMgr-avoA_PEKozU")
+BOT_TOKEN = getenv("BOT_TOKEN", "5306766511:AAFAX5R-MMNMjN9mq6S95EH2-A8RkLO6YmY")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://YaFa:alhajji999@yafa.ckoem7a.mongodb.net/mohmed20034?retryWrites=true&w=majority")
@@ -37,14 +37,14 @@ SONG_DOWNLOAD_DURATION = int(
 )  # Remember to give value in Minutes
 
 # You'll need a Private Group ID for this.
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001182986575"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001530753519"))
 
 # A name for your Music bot.
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "music")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "")
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "1449786008").split())
+    map(int, getenv("OWNER_ID", "").split())
 )  # Input type must be interger
 
 # Get it from http://dashboard.heroku.com/account
@@ -56,10 +56,10 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/YafaMusic/YaMusicBot",
+    "https://github.com/LLLP7/nllnbot",
 )
 BOT_USERNAME = getenv(
-    "BOT_USERNAME", "QQOQQO_BOT"
+    "BOT_USERNAME", "nllnbot"
 )  # معرف بوتك بدون @
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
@@ -68,16 +68,16 @@ GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 # Only  Links formats are  accepted for this Var value.
 CHANNEL_SUDO = getenv(
-    "CHANNEL_SUDO", "EERR_E"
+    "CHANNEL_SUDO", "zzzz7lz"
 )  # معرف قناتك بدون @
 YAFA_NAME = getenv(
-    "YAFA_NAME", "ستوريات💞كروبات💞قنوات💞بنات💞صور💞رمزيات💞تمبلر💞مسابقات"
+    "YAFA_NAME", "حَــأءِ ♡ مـيـمِ"
 )  # اسم قناتك
 YAFA_CHANNEL = getenv(
-   " YAFA_CHANNEL", "https://t.me/EERR_E"
+   " YAFA_CHANNEL", "https://t.me/zzzz7lz"
 )  # رابط قناتك
 SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", None
+    "SUPPORT_CHANNEL", "https://t.me/zzzz7lz"
 )  # رابط قناتك
 SUPPORT_GROUP = getenv(
     "SUPPORT_GROUP", None
@@ -147,7 +147,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(
 
 
 # You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @YukkiStringBot
-STRING1 = getenv("STRING_SESSION", "AgAdM3byRT5VMe2u3QE9oy7oZ-snCkFIXbA1PLPohaBLHDtvUyAc_abv2agBXYf6iIeKzAd0L5wV8OKQkrRQJRJaImQNb6kQul48Ob51ZKfFWWxKuBTf81F4JzmtC-PMgB17YSk87z95EjKpg6AnC-sw_AIq9xmf_js4CW2auv0t7zIQk6W1eWU6M6xDwn7Jr4oMxmdYZCvbVjaVh8C2n3oe9ReLZ08ZXWwRRkhhUlvMsKkDxynCrOJdMr6k54s2FDZYWtBe5bUQ_re5KH2wtNwdaIE9d53lqEvjr6WEB_YXfaTnHRbtrUkGTaj4byIt-xb0pHPWjsjxJKtgieNiK29OAAAAAVEIHDgA")
+STRING1 = getenv("STRING_SESSION", "AgAeQTVv6zoxFPWVn0jYxQgvOiqovxgp40_fvXi8F4OcAmhtWqdaB-kJkX5GFL3QmlxMfDeyxwi4asieV2ZCkj4D-OtQnlgxfquZh5pr2JSnp-mo3OanuT3bUQOYeOXHl4rA0_wF0uzF5-evM6Lo4RBTXAJytzcXaxeYkXrBCoIxn2AINz3_7pzdbVK_co7DcmscfkWTnG7QtZLiwYRampCkbq-VPwCfmC2ACYm6RlrS9bJ9ImwXjbl_sjsLTPh0_t6mpgrJwMq8gOSRK6z7HqeUKf-TvkOlR3DKdGY188ikSJNI4dFQJ6it0gbRTZN1DBl5tlvtJxOg2bx4g42JBnlkAAAAATnzUQsA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -177,7 +177,7 @@ autoclean = []
 
 
 # Images
-START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/d986d5125de10193c252b.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://graph.org/file/3b010874a0eff8c297941.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
