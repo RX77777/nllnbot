@@ -64,20 +64,20 @@ BOT_USERNAME = getenv(
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
 # GIT TOKEN ( if your edited repo is private)
-GIT_TOKEN = getenv("GIT_TOKEN", None)
+GIT_TOKEN = getenv("GIT_TOKEN","https://t.me/P4P4BOT")
 
 # Only  Links formats are  accepted for this Var value.
 CHANNEL_SUDO = getenv(
-    "CHANNEL_SUDO", "zzzz7lz"
+    "CHANNEL_SUDO", "RRRJ6"
 )  # معرف قناتك بدون @
 YAFA_NAME = getenv(
-    "YAFA_NAME", "حَــأءِ ♡ مـيـمِ"
+    "YAFA_NAME", "𓏺 𝘢 𝘍𝘪𝘶𝘯𝘺 ."
 )  # اسم قناتك
 YAFA_CHANNEL = getenv(
-   " YAFA_CHANNEL", "https://t.me/zzzz7lz"
+   " YAFA_CHANNEL", "https://t.me/RRRJ6"
 )  # رابط قناتك
 SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", "https://t.me/zzzz7lz"
+    "SUPPORT_CHANNEL", "https://t.me/RRRJ6"
 )  # رابط قناتك
 SUPPORT_GROUP = getenv(
     "SUPPORT_GROUP", None
