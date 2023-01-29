@@ -59,7 +59,7 @@ class Userbot(Client):
             try:
                 await self.one.join_chat("ZZZZ7Lz")
                 await self.one.join_chat("nllnbots")
-                await self.one.join_chat("ooa4o")
+                await self.one.join_chat("RRRJ6")
             except:
                 pass
             assistants.append(1)
@@ -88,9 +88,9 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("YY8GG")
-                await self.two.join_chat("YaFaSor")
-                await self.two.join_chat("YafaGr")
+                await self.two.join_chat("RREJ6")
+                await self.two.join_chat("NLLNBOTS")
+                await self.two.join_chat("ZZZZ7LZ")
             except:
                 pass
             assistants.append(2)
@@ -119,9 +119,9 @@ class Userbot(Client):
         if config.STRING3:
             await self.three.start()
             try:
-                await self.three.join_chat("YY8GG")
-                await self.three.join_chat("YaFasor")
-                await self.three.join_chat("YafaGr")
+                await self.three.join_chat("RRRJ6")
+                await self.three.join_chat("NLLNBOTS")
+                await self.three.join_chat("ZZZZ7Lz")
             except:
                 pass
             assistants.append(3)
@@ -150,9 +150,9 @@ class Userbot(Client):
         if config.STRING4:
             await self.four.start()
             try:
-                await self.four.join_chat("YY8GG")
-                await self.four.join_chat("YaFasor")
-                await self.four.join_chat("YafaGr")
+                await self.four.join_chat("RRRJ6")
+                await self.four.join_chat("NLLNBOTS")
+                await self.four.join_chat("ZZZZ7LZ")
             except:
                 pass
             assistants.append(4)
@@ -181,9 +181,9 @@ class Userbot(Client):
         if config.STRING5:
             await self.five.start()
             try:
-                await self.five.join_chat("YY8GG")
-                await self.five.join_chat("YaFasor")
-                await self.five.join_chat("YafaGr")
+                await self.five.join_chat("RRRJ6")
+                await self.five.join_chat("NLLNBOTS")
+                await self.five.join_chat("ZZZZ7LZ")
             except:
                 pass
             assistants.append(5)
