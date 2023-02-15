@@ -44,7 +44,7 @@ MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "")
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "5072874938").split())
+    map(int, getenv("OWNER_ID", "").split())
 )  # Input type must be interger
 
 # Get it from http://dashboard.heroku.com/account
@@ -64,7 +64,7 @@ BOT_USERNAME = getenv(
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
 # GIT TOKEN ( if your edited repo is private)
-GIT_TOKEN = getenv("GIT_TOKEN","https://t.me/P4P4BOT")
+GIT_TOKEN = getenv("GIT_TOKEN", "https://t.me/P4P4BOT")
 
 # Only  Links formats are  accepted for this Var value.
 CHANNEL_SUDO = getenv(
