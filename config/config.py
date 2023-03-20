@@ -21,7 +21,7 @@ API_ID = int(getenv("API_ID", "17694201"))
 API_HASH = getenv("API_HASH", "eb8b38c80b362ae8673ac2b59bac17c6")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "5306766511:AAFAX5R-MMNMjN9mq6S95EH2-A8RkLO6YmY")
+BOT_TOKEN = getenv("BOT_TOKEN", "")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://YaFa:alhajji999@yafa.ckoem7a.mongodb.net/mohmed20034?retryWrites=true&w=majority")
@@ -44,7 +44,7 @@ MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "LinDa Music")
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "1457192209").split())
+    map(int, getenv("OWNER_ID", "5072874938").split())
 )  # Input type must be interger
 
 # Get it from http://dashboard.heroku.com/account
@@ -56,7 +56,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/LLLP7/nllnbot",
+    "https://github.com/rx77777/nllnbot",
 )
 BOT_USERNAME = getenv(
     "BOT_USERNAME", "nllnbot"
@@ -147,7 +147,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(
 
 
 # You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @YukkiStringBot
-STRING1 = getenv("STRING_SESSION", "AgAeQTVv6zoxFPWVn0jYxQgvOiqovxgp40_fvXi8F4OcAmhtWqdaB-kJkX5GFL3QmlxMfDeyxwi4asieV2ZCkj4D-OtQnlgxfquZh5pr2JSnp-mo3OanuT3bUQOYeOXHl4rA0_wF0uzF5-evM6Lo4RBTXAJytzcXaxeYkXrBCoIxn2AINz3_7pzdbVK_co7DcmscfkWTnG7QtZLiwYRampCkbq-VPwCfmC2ACYm6RlrS9bJ9ImwXjbl_sjsLTPh0_t6mpgrJwMq8gOSRK6z7HqeUKf-TvkOlR3DKdGY188ikSJNI4dFQJ6it0gbRTZN1DBl5tlvtJxOg2bx4g42JBnlkAAAAATnzUQsA")
+STRING1 = getenv("STRING_SESSION", "")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -177,7 +177,7 @@ autoclean = []
 
 
 # Images
-START_IMG_URL = getenv("START_IMG_URL", "https://graph.org/file/3b010874a0eff8c297941.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
