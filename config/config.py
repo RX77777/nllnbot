@@ -74,10 +74,10 @@ YAFA_NAME = getenv(
     "YAFA_NAME", "𓏺 𝘢 𝘍𝘪𝘶𝘯𝘺 ."
 )  # اسم قناتك
 YAFA_CHANNEL = getenv(
-   " YAFA_CHANNEL", "https://t.me/RRRJ6"
+   " YAFA_CHANNEL", "https://t.me/AAAWY"
 )  # رابط قناتك
 SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", "https://t.me/RRRJ6"
+    "SUPPORT_CHANNEL", "https://t.me/AAAYW"
 )  # رابط قناتك
 SUPPORT_GROUP = getenv(
     "SUPPORT_GROUP", None
