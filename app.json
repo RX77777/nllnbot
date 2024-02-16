@@ -1,0 +1,75 @@
+{
+    "name": "سورس ميوزك فريدوم",
+    "description": "سورس فريدوم لتشغيل الاغاني , رائع انت تستخدم احدث اصدار !",
+    "logo": "https://te.legra.ph/file/4807752a011965b771900.jpg",
+    "keywords": ["music", "voice chat", "telegram"],
+    "repository": "https://github.com/STKR2/LG",
+    "stack": "container",
+    "env": {
+      "API_ID": {
+        "description": "- اتركها كما هي .",
+        "value": "8934899",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "- اتركها كما هي .",
+        "value": "bf3e98d2c351e4ad06946b4897374a1e",
+        "required": true
+      },
+      "AUTO_LEAVING_ASSISTANT": {
+        "description": "- اتركها كما هي .",
+        "value": "True",
+        "required": false
+      },
+      "BOT_TOKEN": {
+        "description": "- اكتب توكن البوت .",
+        "value": "",
+        "required": true
+          
+      },
+      "MONGO_DB_URI": {
+        "description": "- اتركها كما هي .",
+        "value": "mongodb+srv://Bikash:Bikash@bikash.yl2nhcy.mongodb.net/?retryWrites=true&w=majority",
+        "required": true
+      },
+      "MUSIC_BOT_NAME": {
+        "description": "- اتركها كما هي .",
+        "value": "ليندا",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "- اكتب ايدي المنشئ ، او اتركها كما هي .",
+        "value": "5072874938",
+        "required": true
+      },
+      "STRING_SESSION": {
+        "description": "- @FreedomLoBoT كود بايروجرام يعمل على هذا السورس فقط من هذا البوت .",
+        "value": "AgApdrj6MhpkyAQ-vnczARG0baK2z09NDU9LfbMIJmXiiaDS9g2flD891TXGDAM0Ov1SyRhBK_L-jMmKsVJdHyS9VAAisegXx_IGU0eghYBbi-C-5z8wNEdeaul2VMUWrIF5qTx-SzD70v4owwQ-8xD46r7bVpS6LWJE5_l8pw9odfULPmD-NMvP1PequWMv3dcqoES8jcaksYEK1IqS45jqbOd_U9frl03KHSxCXmr4cOMBhTnnYr12cOBxQghl7GVgD_lZymkIpICds476SmETE6q7WkP2ZP5Npwp6cZaA3bXgPBgj4mrOUXR7RgxO6_EV-qqGCqemur_KPBpYqRL9AAAAATla4wkA",
+        "required": true
+      },
+      
+      "LOG_GROUP_ID": {
+        "description": "- اكتب ايدي المجموعة يجب ان يبدء ب -100 .",
+        "value": "-1001530753519",
+        "required": true
+      },
+      "UPSTREAM_REPO": {
+        "description": "- لاتغيرها ابدا .",
+        "value": "https://github.com/RX77777/KROZ",
+        "required": true
+      },
+      "UPSTREAM_BRANCH": {
+        "description": "- لاتغيرها ابدا",
+        "value": "master",
+        "required": true
+       }
+    },
+    "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
