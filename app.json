@@ -3,7 +3,7 @@
     "description": "سورس فريدوم لتشغيل الاغاني , رائع انت تستخدم احدث اصدار !",
     "logo": "https://te.legra.ph/file/4807752a011965b771900.jpg",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/STKR2/LG",
+    "repository": "https://github.com/rx77777/nllnbot",
     "stack": "container",
     "env": {
       "API_ID": {
@@ -55,7 +55,7 @@
       },
       "UPSTREAM_REPO": {
         "description": "- لاتغيرها ابدا .",
-        "value": "https://github.com/RX77777/KROZ",
+        "value": "https://github.com/RX77777/nllnbot",
         "required": true
       },
       "UPSTREAM_BRANCH": {
